@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>eLearning Platform</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li onclick="scrollToSection('home')">HOME</li>
+          <li onclick="scrollToSection('courses')">COURSES</li>
+          <li onclick="scrollToSection('progress')">PROGRESS</li>
+          <li onclick="scrollToSection('faq')">FAQ</li>
+        </ul>
+      </nav>
+      <div class="logo">eLearn</div>
+    </header>
+
+    <section id="home">
+      <div class="hero">
+        <div class="text-section">
+          <h1>Online ELearning Platform</h1>
+          <p>
+            Learn from top instructors through interactive courses and videos.
+            Enhance your skills anytime, anywhere.
+          </p>
+          <div class="login-form">
+            <h2>Login</h2>
+            <input type="text" placeholder="Username" />
+            <input type="password" placeholder="Password" />
+            <button onclick="alert('Logged in successfully!')">Login</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="courses">
+      <h1>Our Courses</h1>
+      <div class="course-cards">
+        <div class="course-card">
+          <h2>Introduction to Python</h2>
+          <p>Learn Python basics with hands-on coding examples.</p>
+          <button onclick="showCourseSection('course-python')">Explore</button>
+        </div>
+        <div class="course-card">
+          <h2>Web Development with HTML & CSS</h2>
+          <p>Build beautiful, responsive websites from scratch.</p>
+          <button onclick="showCourseSection('course-htmlcss')">Explore</button>
+        </div>
+        <div class="course-card">
+          <h2>JavaScript Basics</h2>
+          <p>Master the fundamentals of JavaScript programming.</p>
+          <button onclick="showCourseSection('course-js')">Explore</button>
+        </div>
+        <div class="course-card">
+          <h2>Data Structures in C++</h2>
+          <p>
+            Understand core data structures and how to implement them in C++.
+          </p>
+          <button onclick="showCourseSection('course-ds')">Explore</button>
+        </div>
+        <div class="course-card">
+          <h2>SQL for Beginners</h2>
+          <p>Master the basics of SQL and relational databases.</p>
+          <button onclick="showCourseSection('course-sql')">Explore</button>
+        </div>
+      </div>
+
+      <!-- Course Detail Sections -->
+      <div id="course-python" class="course-detail">
+        <h2>Introduction to Python</h2>
+        <div class="youtube-videos">
+          <iframe
+            id="python1"
+            src="https://www.youtube.com/embed/_uQrJ0TkZlc?enablejsapi=1"
+            allowfullscreen
+            data-course="python"
+          ></iframe>
+          <iframe
+            id="python2"
+            src="https://www.youtube.com/embed/rfscVS0vtbw?enablejsapi=1"
+            allowfullscreen
+            data-course="python"
+          ></iframe>
+        </div>
+      </div>
+      <div id="course-htmlcss" class="course-detail">
+        <h2>Web Development with HTML & CSS</h2>
+        <div class="youtube-videos">
+          <iframe
+            id="htmlcss1"
+            src="https://www.youtube.com/embed/3EMxBkqC4z0?enablejsapi=1"
+            allowfullscreen
+            data-course="htmlcss"
+          ></iframe>
+          <iframe
+            id="htmlcss2"
+            src="https://www.youtube.com/embed/yfoY53QXEnI?enablejsapi=1"
+            allowfullscreen
+            data-course="htmlcss"
+          ></iframe>
+        </div>
+      </div>
+      <div id="course-js" class="course-detail">
+        <h2>JavaScript Basics</h2>
+        <div class="youtube-videos">
+          <iframe
+            id="js1"
+            src="https://www.youtube.com/embed/W6NZfCO5SIk?enablejsapi=1"
+            allowfullscreen
+            data-course="js"
+          ></iframe>
+          <iframe
+            id="js2"
+            src="https://www.youtube.com/embed/PkZNo7MFNFg?enablejsapi=1"
+            allowfullscreen
+            data-course="js"
+          ></iframe>
+        </div>
+      </div>
+      <div id="course-ds" class="course-detail">
+        <h2>Data Structures in C++</h2>
+        <div class="youtube-videos">
+          <iframe
+            id="ds1"
+            src="https://www.youtube.com/embed/B31LgI4Y4DQ?enablejsapi=1"
+            allowfullscreen
+            data-course="ds"
+          ></iframe>
+          <iframe
+            id="ds2"
+            src="https://www.youtube.com/embed/RBSGKlAvoiM?enablejsapi=1"
+            allowfullscreen
+            data-course="ds"
+          ></iframe>
+        </div>
+      </div>
+      <div id="course-sql" class="course-detail">
+        <h2>SQL for Beginners</h2>
+        <div class="youtube-videos">
+          <iframe
+            id="sql1"
+            src="https://www.youtube.com/embed/HXV3zeQKqGY?enablejsapi=1"
+            allowfullscreen
+            data-course="sql"
+          ></iframe>
+          <iframe
+            id="sql2"
+            src="https://www.youtube.com/embed/27axWjz3T4c?enablejsapi=1"
+            allowfullscreen
+            data-course="sql"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="progress">
+      <h1>Your Progress</h1>
+      <div class="progress-tracker">
+        <div class="progress-item">
+          <span>Introduction to Python</span>
+          <div class="progress-bar-container">
+            <div id="progress-python" class="progress-bar"></div>
+          </div>
+        </div>
+        <div class="progress-item">
+          <span>Web Development with HTML & CSS</span>
+          <div class="progress-bar-container">
+            <div id="progress-htmlcss" class="progress-bar"></div>
+          </div>
+        </div>
+        <div class="progress-item">
+          <span>JavaScript Basics</span>
+          <div class="progress-bar-container">
+            <div id="progress-js" class="progress-bar"></div>
+          </div>
+        </div>
+        <div class="progress-item">
+          <span>Data Structures in C++</span>
+          <div class="progress-bar-container">
+            <div id="progress-ds" class="progress-bar"></div>
+          </div>
+        </div>
+        <div class="progress-item">
+          <span>SQL for Beginners</span>
+          <div class="progress-bar-container">
+            <div id="progress-sql" class="progress-bar"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h1 style="color: #ff66ff">FAQ</h1>
+      <div class="faq-item">
+        <strong>Q:</strong> How do I track my progress?<br />
+        <strong>A:</strong> As you watch videos in each course, your progress
+        bar updates automatically.
+      </div>
+      <div class="faq-item">
+        <strong>Q:</strong> Can I pause and resume videos?<br />
+        <strong>A:</strong> Yes! Your progress will save based on how much
+        you've watched.
+      </div>
+      <div class="faq-item">
+        <strong>Q:</strong> Do I need an account?<br />
+        <strong>A:</strong> Yes, please login to save your progress permanently.
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 eLearning Platform | Developed by Tanuja</p>
+      <a href="#home">Back to top</a>
+    </footer>
+  </body>
+</html>
