@@ -107,11 +107,13 @@ Each course includes **2 embedded YouTube videos** and a dynamically updating pr
 
 ---
 
-## 🚀 (Optional) Live Demo
+## 🚀  Live Demo
 
-You can deploy this site on GitHub Pages or Netlify:
-- [GitHub Pages Deployment Guide](https://pages.github.com/)
-- [Netlify Hosting Guide](https://www.netlify.com/)
+https://tanunotes.github.io/elearning_platform/
+
+## OUTPUT
+
+- ![Image](https://github.com/user-attachments/assets/ae68ca8e-9551-4228-a1f1-516f78562bc5)
 
 ---
 
